@@ -1,19 +1,13 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { ButtonsModule } from '@progress/kendo-angular-buttons';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { KendouiButtonsComponent } from './kendoui-buttons/kendoui-buttons.component';
-
-
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
+import { ButtonsModule } from "@progress/kendo-angular-buttons";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    KendouiButtonsComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -23,4 +17,4 @@ import { KendouiButtonsComponent } from './kendoui-buttons/kendoui-buttons.compo
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
