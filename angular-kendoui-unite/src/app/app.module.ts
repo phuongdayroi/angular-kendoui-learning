@@ -5,14 +5,20 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { ButtonsModule } from "@progress/kendo-angular-buttons";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { TodoComponent } from "./todo/todo.component";
+import { InputsModule } from "@progress/kendo-angular-inputs";
+import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
+
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, TodoComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ButtonsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    InputsModule,
+    DateInputsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

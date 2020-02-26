@@ -1,0 +1,26 @@
+<div @todoAnimations>
+  <h1>What good shall I do today?</h1>
+  <input
+    kendoTextBox
+    type="text"
+    name="city"
+    class="form-control new-todo-input"
+    (keyup.enter)="addTodo(itemInput)"
+    #itemInput
+  />
+  <div *ngIf="todos" class="list-group todos">
+    <button
+      @todoItem
+      kendoButton
+      look="flat"
+      class="todo"
+      *ngFor="let todo of todos; index as i"
+    >
+      <h3>
+        <span (click)="removeTodo(i)">{{ todo.text }}</span>
+      </h3>
+      <kendo-timepicker [(value)]="todo.due"></kendo-timepicker>
+    </button>
+    <div *ngIf="todos.length == 0" @fade class="finished-list">Finish</div>
+  </div>
+</div>
